@@ -1,43 +1,50 @@
-# JavaScript Quiz
+# Development Strategy
 
-...
+> `Encapsulation week 2`
 
----
+## todo-list-with-class
 
-## User Story Dependencies
+### WIREFRAME
 
-[Story Dependency Diagram](https://excalidraw.com/)
-
----
-
-## WIREFRAME
-
-![wireframe]()
+![wireframe](/wireframe.png)
 
 ---
 
-## 0.Setup
+### 0. Set-Up
+
+_A User can see my initial repository and live demo_
+
+### Repository
+
+- Created a new repository from this [template](https://github.com/HackYourFutureBelgium/encapsulation-starter-wk-3-class/)
+- Clone the repository
+- Add a wireframe
+- Start the development strategy
+- Push the changes to GitHub
+- Turn on GitHub Pages
 
 ---
 
-## 1. Initialize Application
+## 1. Initial HTML and CSS structure and Development strategy
+
+> _assigned to Oguz_
 
 __As a user I want to see the initial page when I load the site__
 
-- _Given [context] when [a specific action is performed] then [a set of consequences should occur]__
-- ...
+### Repo
 
-### REPO
+This user story has been developed through a branch called `master`
 
-- This user story is developed on branch `_`.
-- This branch is merged to `master` branch after completion.
+### HTML
 
-### Task A
+- Created initial user interface according to wireframe
 
-### Task B
+### CSS
 
-### Task ...
+- Added some css features
+
+### Javascript
+
+- Nothing to change
 
 ---
-
-## ...
