@@ -4,18 +4,19 @@ import { logger } from '../../lib/logger.js';
 import { List } from '../list-class.js';
 
 export const createNewListHandler = (event) => {
+  
+  event.preventDefault();
 
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode !== 13) {
-    return;
-  }
-
+  const newInput = document.getElementById('list-input').value;
   const newList = new List(event.target.value);
 
-  const renderedNewList = newList.render();
+  newList.state = {
+    name: newInput
+  };
+  const renderedNewList = newList.renderList(newList.state);
+  
 
-
-  document.getElementById('lists')
+  document.getElementById('row')
     .appendChild(renderedNewList);
 
   logger.push({
@@ -26,3 +27,4 @@ export const createNewListHandler = (event) => {
   });
 
 };
+

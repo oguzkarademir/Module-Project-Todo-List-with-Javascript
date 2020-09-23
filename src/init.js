@@ -3,5 +3,8 @@
 import { createNewListHandler } from './handlers/create-new-list.js'
 
 
-document.getElementById('list-name-input')
-  .addEventListener('keyup', createNewListHandler);
+debugger;
+document.getElementById('form-form')
+  .addEventListener("submit", createNewListHandler);
+document.getElementById('newlist')
+  .addEventListener('click', createNewListHandler);
