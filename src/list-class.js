@@ -8,7 +8,8 @@ import { logger } from '../lib/logger.js';
 export class List {
 
   state = {
-    name: ''
+    name: '',
+    text: ''
   };
 
   constructor(name) {
@@ -63,4 +64,21 @@ export class List {
     divEl.appendChild(divEl4);
     return divEl;
   };
+
+  renderItem(obj){
+
+    const ulEl = document.createElement('ul');
+    ulEl.className = "ul-item";
+
+    const liEl = document.createElement('li');
+    liEl.style.listStyle = 'none';
+    liEl.innerHTML = obj.text;
+
+    const checkBoxEl = document.createElement('input');
+    checkBoxEl.type = 'checkbox';
+    checkBoxEl.id = 'checkbox';
+    liEl.appendChild(checkBoxEl);
+    ulEl.appendChild(liEl)
+    return ulEl;
+  }
 };
