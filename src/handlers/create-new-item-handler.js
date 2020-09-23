@@ -7,7 +7,7 @@ export const createNewItemHandler = (event) => {
   
   event.preventDefault();
 
-  const newInput = document.getElementById('input-add-todos').value;
+  const newInput = event.target[0].value;
   const newList = new List(event.target.value);
 
   newList.state = {
@@ -15,7 +15,7 @@ export const createNewItemHandler = (event) => {
   };
   const renderedNewItem = newList.renderItem(newList.state);
   
-  const todo = event.target.parentElement.parentElement.children[2]
+  event.target.parentElement.nextSibling
     .appendChild(renderedNewItem);
 
   logger.push({
