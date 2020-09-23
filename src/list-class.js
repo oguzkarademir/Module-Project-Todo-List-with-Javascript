@@ -24,10 +24,43 @@ export class List {
     });
   };
 
-  render() {
+  renderList(obj) {
+    const divEl = document.createElement('div');
+    divEl.id = 'div-list';
+
+    const divEl2 = document.createElement('div');
+    divEl2.id = 'list-header';
+    const h2El = document.createElement('h2');
+    h2El.id = 'nameoflist';
+    h2El.innerText = obj.name;
     const buttonEl = document.createElement('button');
-    buttonEl.innerHTML = this.state.name;
-    buttonEl.addEventListener('click', this.printState.bind(this));
-    return buttonEl;
+    buttonEl.id = 'delete-list';
+    buttonEl.innerText = 'X';
+    buttonEl.addEventListener("click", this.printState.bind(this));
+    divEl2.appendChild(h2El);
+    divEl2.appendChild(buttonEl);
+
+    const divEl3 = document.createElement('div');
+    divEl3.id = 'div-add-todos';
+    const formEl = document.createElement('form');
+    formEl.id = 'form-add-todos';
+    formEl.addEventListener("submit", this.printState.bind(this));
+    const inputEl = document.createElement('input');
+    inputEl.placeholder = 'Enter your todo';
+    inputEl.id = 'input-add-todos';
+    const buttonEl2 = document.createElement('button');
+    buttonEl2.id = 'newtodo';
+    buttonEl2.innerText = 'Add Todo';
+    formEl.appendChild(inputEl);
+    formEl.appendChild(buttonEl2);
+    divEl3.appendChild(formEl);
+
+    const divEl4 = document.createElement('div');
+    divEl4.id = 'todo';
+
+    divEl.appendChild(divEl2);
+    divEl.appendChild(divEl3);
+    divEl.appendChild(divEl4);
+    return divEl;
   };
 };
