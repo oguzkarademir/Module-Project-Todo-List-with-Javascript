@@ -1,7 +1,6 @@
 'use strict';
 
 import { logger } from '../lib/logger.js';
-import { isCompleted } from './handlers/completed.js';
 
 // This list class is here for example.
 //  delete it!  your project does not need to be a list
@@ -92,5 +91,8 @@ export class List {
       list.style.textDecorationLine = 'none';
     }
     
+  }
+  remove(target) {
+    target.parentElement.parentElement.remove();
   }
 };

@@ -3,6 +3,8 @@
 import { createNewListHandler } from './handlers/create-new-list.js'
 import { createNewItemHandler } from './handlers/create-new-item-handler.js'
 import { isCompleted } from './handlers/completed.js'
+import { removeList } from './handlers/remove-list.js'
+
 
 debugger;
 document.getElementById('form-form')
@@ -15,3 +17,6 @@ document.getElementById('row')
 
  document.getElementById('row')
  .addEventListener('click', isCompleted);
+
+ document.getElementById('row')
+ .addEventListener('click', removeList);
