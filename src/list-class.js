@@ -70,21 +70,28 @@ export class List {
     const ulEl = document.createElement('ul');
     ulEl.className = "ul-item";
 
-    const liEl = document.createElement('li');
-    liEl.style.listStyle = 'none';
-    liEl.innerHTML = obj.text;
-
     const checkBoxEl = document.createElement('input');
     checkBoxEl.type = 'checkbox';
     checkBoxEl.id = 'checkbox';
-    liEl.appendChild(checkBoxEl);
-    ulEl.appendChild(liEl)
+
+    const liEl = document.createElement('li');
+    liEl.style.listStyle = 'none';
+    liEl.className = 'item-text';
+    liEl.innerHTML = obj.text;
+
+    const buttonEl = document.createElement('button');
+    buttonEl.innerHTML = '❌';
+    buttonEl.id = 'remove-item';
+
+    ulEl.appendChild(checkBoxEl);
+    ulEl.appendChild(liEl);
+    ulEl.appendChild(buttonEl);
     return ulEl;
   }
 
   completing(event) {
 
-    const list = event.parentElement;
+    const list = event.nextSibling;
     if (event.checked) {
       list.style.textDecorationLine = 'line-through';
     } else {
@@ -93,6 +100,10 @@ export class List {
     
   }
   remove(target) {
-    target.parentElement.parentElement.remove();
+    if(target.id === 'delete-list') {
+      target.parentElement.parentElement.remove();
+    } else if (target.id === 'remove-item') {
+      target.parentElement.remove();
+    }
   }
 };

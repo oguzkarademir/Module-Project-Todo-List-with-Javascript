@@ -109,3 +109,11 @@ header {
 #div-add-todos #form-add-todos button:hover {
     background-color: rgb(228, 109, 228);
 }
+
+.ul-item {
+    display: flex;
+    justify-content: space-between;
+}
+.item-text {
+    justify-self: flex-start !important;
+}
