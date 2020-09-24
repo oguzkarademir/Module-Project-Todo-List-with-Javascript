@@ -1,6 +1,7 @@
 'use strict';
 
 import { logger } from '../lib/logger.js';
+import { isCompleted } from './handlers/completed.js';
 
 // This list class is here for example.
 //  delete it!  your project does not need to be a list
@@ -80,5 +81,16 @@ export class List {
     liEl.appendChild(checkBoxEl);
     ulEl.appendChild(liEl)
     return ulEl;
+  }
+
+  completing(event) {
+
+    const list = event.parentElement;
+    if (event.checked) {
+      list.style.textDecorationLine = 'line-through';
+    } else {
+      list.style.textDecorationLine = 'none';
+    }
+    
   }
 };
