@@ -70,6 +70,9 @@ export class List {
     const ulEl = document.createElement('ul');
     ulEl.className = "ul-item";
 
+    const divEl = document.createElement('div');
+    divEl.className = 'div-item';
+
     const checkBoxEl = document.createElement('input');
     checkBoxEl.type = 'checkbox';
     checkBoxEl.id = 'checkbox';
@@ -79,12 +82,14 @@ export class List {
     liEl.className = 'item-text';
     liEl.innerHTML = obj.text;
 
+    divEl.appendChild(checkBoxEl);
+    divEl.appendChild(liEl);
+
     const buttonEl = document.createElement('button');
     buttonEl.innerHTML = '❌';
     buttonEl.id = 'remove-item';
 
-    ulEl.appendChild(checkBoxEl);
-    ulEl.appendChild(liEl);
+    ulEl.appendChild(divEl);
     ulEl.appendChild(buttonEl);
     return ulEl;
   }
