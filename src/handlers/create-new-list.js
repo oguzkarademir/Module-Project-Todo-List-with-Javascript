@@ -8,6 +8,10 @@ export const createNewListHandler = (event) => {
   event.preventDefault();
 
   const newInput = document.getElementById('list-input').value;
+  if(newInput === '') {
+    alert('please enter some words');
+    return;
+  }
   const newList = new List(event.target.value);
 
   newList.state = {

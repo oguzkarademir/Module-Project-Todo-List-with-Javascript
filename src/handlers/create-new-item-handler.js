@@ -8,6 +8,10 @@ export const createNewItemHandler = (event) => {
   event.preventDefault();
 
   const newInput = event.target[0].value;
+  if(newInput === '') {
+    alert('please enter some words');
+    return;
+  }
   const newList = new List(event.target.value);
 
   newList.state = {

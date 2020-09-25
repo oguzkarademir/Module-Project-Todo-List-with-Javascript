@@ -7,6 +7,8 @@ body {
     padding: 0;
     text-align: center;
     background-color: rgb(241, 219, 89);
+    font-family: 'Lexend Peta', sans-serif;
+
 }
 
 header {
@@ -34,12 +36,16 @@ header {
     height: 30px;
     border-style: none;
     border-radius: 5px;
+    padding-left: 10px;
+    font-family: 'Lexend Peta', sans-serif;
 }
 
 #form-form button {
     width: 25%;
     border-style: none;
     border-radius: 5px;
+    font-family: 'Lexend Peta', sans-serif;
+
 }
 #form-form button:hover {
     background-color: cadetblue;
@@ -73,7 +79,9 @@ header {
 }
 #list-header #nameoflist {
     height: 40px;
-    font-size: 25px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 8px;
     font-family: 'Lexend Peta', sans-serif;
 }
 #list-header #delete-list {
@@ -96,6 +104,8 @@ header {
 #div-add-todos #form-add-todos input {
     width: 70%;
     height: 25px;
+    padding-left: 10px;
+    font-family: 'Lexend Peta', sans-serif;
     border-style: none;
     border-radius: 5px;
 }
@@ -104,6 +114,7 @@ header {
     width: 25%;
     border-style: none;
     border-radius: 5px;
+    font-family: 'Lexend Peta', sans-serif;
 }
 
 #div-add-todos #form-add-todos button:hover {
@@ -113,7 +124,28 @@ header {
 .ul-item {
     display: flex;
     justify-content: space-between;
+    background-color: #cf660f;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.div-item {
+    display: flex;
+    width: 40%;
+    padding: 10px;
+}
+#checkbox {
+    align-self: center;
+    margin-right: 20px;
+    transform:scale(1.2);
 }
 .item-text {
-    justify-self: flex-start !important;
+    font-size: 18px;
+}
+#remove-item {
+    width: 40px;
+    border-style: none;
+    background-color: #cf660f;
+}
+#remove-item:hover {
+    background-color: cornsilk;
 }
