@@ -1,5 +1,5 @@
-import { logger } from '../../lib/logger.js';
-import { List } from '../list-class.js';
+import { logger } from '../../lib/logger';
+import { List } from '../list-class';
 
 export const isCompleted = (event) => {
 
