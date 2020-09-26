@@ -1,8 +1,8 @@
 'use strict';
 
-import { createNewListHandler } from './handlers/create-new-list'
-import { createNewItemHandler } from './handlers/create-new-item-handler'
-import { isCompleted } from './handlers/completed'
+import { createNewListHandler } from './handlers/create-new-list.js'
+import { createNewItemHandler } from './handlers/create-new-item-handler.js'
+import { isCompleted } from './handlers/completed.js'
 import { removeList } from './handlers/remove-list.js'
 import { removeItem } from './handlers/remove-item.js'
 

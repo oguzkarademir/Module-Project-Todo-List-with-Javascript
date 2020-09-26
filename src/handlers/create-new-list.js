@@ -1,4 +1,3 @@
-'use strict';
 
 import { logger } from '../../lib/logger.js';
 import { List } from '../list-class.js';
