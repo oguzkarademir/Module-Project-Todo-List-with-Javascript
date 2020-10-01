@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>Encapsulation-list-project</title>
+  <link href="./public/style.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!--Header-->
+  <header>
+    <h2 id="title">Todo Lists</h2>
+  </header>
+
+  <!--Adding new list-->
+  <div id="div-form">
+    <form id="form-form">
+      <input id="list-input" type="text" placeholder="Enter your title">
+      <button id="newlist">Add a new list</button>
+    </form>
+  </div>
+
+  <div id="row"></div>
+
+  <!-- load the frontend testing & reviewing dependencies -->
+  <script src='./lib/review-buttons.js' type='module'></script>
+  <script src='./lib/gremlins.js'></script>
+
+  <!-- test the app object -->
+  <script type='module' src='./src/init.js' ></script>
+
+</body>
+
+</html>
